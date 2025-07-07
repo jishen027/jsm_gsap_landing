@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(),],
-  base: 'jsm_landing'
-})
+  base: 'jsm_gsap_landing'
+});

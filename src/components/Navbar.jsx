@@ -3,6 +3,7 @@ import { navLinks } from "../../constants";
 import gsap from "gsap";
 
 const Navbar = () => {
+  const baseUrl = "jsm_gsap_landing";
   useGSAP(() => {
     const navTween = gsap.timeline({
       scrollTrigger: {
@@ -31,7 +32,7 @@ const Navbar = () => {
     <nav>
       <div>
         <a href="#home" className="flex items-center gap-2">
-          <img src="/images/logo.png" alt="logo" />
+          <img src={`${baseUrl}/images/logo.png`} alt="logo" />
           <p>Velvet Pour</p>
         </a>
         <ul>

@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const HeroComponent = () => {
+  const baseUrl = "jsm_gsap_landing";
   const videoRef = useRef();
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
@@ -66,12 +67,12 @@ const HeroComponent = () => {
       <section id="hero" className="noisy">
         <h1 className="title">Mojito</h1>
         <img
-          src="/images/hero-left-leaf.png"
+          src={`${baseUrl}/images/hero-left-leaf.png`}
           alt="left-leaf"
           className="left-leaf"
         />
         <img
-          src="/images/hero-right-leaf.png"
+          src={`${baseUrl}images/hero-right-leaf.png`}
           alt="right-leaf"
           className="right-leaf"
         />

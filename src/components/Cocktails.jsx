@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { cocktailLists, mockTailLists } from "../../constants";
 import gsap from "gsap";
 const Cocktails = () => {
+  const baseUrl = "jsm_gsap_landing";
   useGSAP(() => {
     const parallaxTimeline = gsap.timeline({
       scrollTrigger: {
@@ -25,9 +26,13 @@ const Cocktails = () => {
 
   return (
     <section id="cocktails" className="noisy">
-      <img src="/images/cocktail-left-leaf.png" alt="l-leaf" id="c-left-leaf" />
       <img
-        src="/images/cocktail-right-leaf.png"
+        src={`${baseUrl}/images/cocktail-left-leaf.png`}
+        alt="l-leaf"
+        id="c-left-leaf"
+      />
+      <img
+        src={`${baseUrl}/images/cocktail-right-leaf.png`}
         alt="r-leaf"
         id="c-right-leaf"
       />
