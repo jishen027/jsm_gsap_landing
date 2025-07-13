@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or 'master', adjust to your default branch
+      - main # Adjust to your default branch
 
 permissions:
-  contents: write  # Required for GitHub Pages deployment
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -31,4 +31,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./dist
+          user_name: github-actions
+          user_email: github-actions@github.com
