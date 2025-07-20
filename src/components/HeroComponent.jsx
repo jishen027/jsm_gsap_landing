@@ -3,9 +3,9 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import { heroLeftLeaf, heroRightLeaf } from "../assets/images";
 
 const HeroComponent = () => {
-  const baseUrl = "jsm_gsap_landing";
   const videoRef = useRef();
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
@@ -67,12 +67,12 @@ const HeroComponent = () => {
       <section id="hero" className="noisy">
         <h1 className="title">Mojito</h1>
         <img
-          src={`${baseUrl}/images/hero-left-leaf.png`}
+          src={heroLeftLeaf}
           alt="left-leaf"
           className="left-leaf"
         />
         <img
-          src={`${baseUrl}images/hero-right-leaf.png`}
+          src={heroRightLeaf}
           alt="right-leaf"
           className="right-leaf"
         />
